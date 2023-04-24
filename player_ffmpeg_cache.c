@@ -319,8 +319,8 @@ static int packet_queue_put_update(PacketQueue *q, AVPacket *pkt)
 
 	//add to tail
 	if ((ret = avpkt_cache_new_packet(&pkt1->pkt, pkt)) < 0) {
-		av_free(pkt1);
-		pkt1 = NULL;
+// 		av_free(pkt1);
+// 		pkt1 = NULL;
 		cache_unlock(&q->lock);
 		return ret;
 	}
